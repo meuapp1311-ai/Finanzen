@@ -1,0 +1,442 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #090d16;
+    color: #f1f5f9;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+}
+
+/* Custom subtle dark scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* ==========================================================================
+   TEMA CLARO (LIGHT MODE) - ALTA LEGIBILIDADE & CORES FINTECH HARMONIOSAS
+   Aplicado quando html tem a classe 'light' ou [data-theme='light']
+   ========================================================================== */
+
+html.light,
+[data-theme="light"] {
+  color-scheme: light;
+}
+
+html.light body,
+[data-theme="light"] body {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+html.light ::-webkit-scrollbar-track,
+[data-theme="light"] ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+html.light ::-webkit-scrollbar-thumb,
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+
+html.light ::-webkit-scrollbar-thumb:hover,
+[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* 1. FUNDOS DE CONTAINERS E CARDS (Substitui dark slates por brancos e off-whites) */
+html.light .bg-\[\#090d16\],
+[data-theme="light"] .bg-\[\#090d16\] {
+  background-color: #f8fafc !important;
+}
+
+html.light .bg-\[\#090d16\]\/90,
+html.light .bg-\[\#090d16\]\/95,
+[data-theme="light"] .bg-\[\#090d16\]\/90,
+[data-theme="light"] .bg-\[\#090d16\]\/95 {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(12px);
+}
+
+/* Cards principais em branco puro */
+html.light .bg-slate-900,
+html.light .bg-slate-900\/60,
+html.light .bg-slate-900\/70,
+html.light .bg-slate-900\/80,
+html.light .bg-slate-900\/85,
+html.light .bg-slate-900\/90,
+[data-theme="light"] .bg-slate-900,
+[data-theme="light"] .bg-slate-900\/60,
+[data-theme="light"] .bg-slate-900\/70,
+[data-theme="light"] .bg-slate-900\/80,
+[data-theme="light"] .bg-slate-900\/85,
+[data-theme="light"] .bg-slate-900\/90 {
+  background-color: #ffffff !important;
+  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.05), 0 1px 2px -1px rgba(15, 23, 42, 0.03);
+}
+
+/* Sub-containers e painéis internos em cinza neutro suave (slate-100) */
+html.light .bg-slate-950,
+html.light .bg-slate-950\/40,
+html.light .bg-slate-950\/60,
+html.light .bg-slate-950\/70,
+html.light .bg-slate-950\/80,
+html.light .bg-slate-950\/90,
+[data-theme="light"] .bg-slate-950,
+[data-theme="light"] .bg-slate-950\/40,
+[data-theme="light"] .bg-slate-950\/60,
+[data-theme="light"] .bg-slate-950\/70,
+[data-theme="light"] .bg-slate-950\/80,
+[data-theme="light"] .bg-slate-950\/90 {
+  background-color: #f1f5f9 !important;
+}
+
+/* Botões neutros e tags */
+html.light .bg-slate-800,
+html.light .bg-slate-800\/40,
+html.light .bg-slate-800\/50,
+html.light .bg-slate-800\/60,
+html.light .bg-slate-800\/80,
+[data-theme="light"] .bg-slate-800,
+[data-theme="light"] .bg-slate-800\/40,
+[data-theme="light"] .bg-slate-800\/50,
+[data-theme="light"] .bg-slate-800\/60,
+[data-theme="light"] .bg-slate-800\/80 {
+  background-color: #e2e8f0 !important;
+}
+
+html.light .hover\:bg-slate-800:hover,
+html.light .hover\:bg-slate-700:hover,
+html.light .hover\:bg-slate-800\/60:hover,
+[data-theme="light"] .hover\:bg-slate-800:hover,
+[data-theme="light"] .hover\:bg-slate-700:hover,
+[data-theme="light"] .hover\:bg-slate-800\/60:hover {
+  background-color: #cbd5e1 !important;
+}
+
+/* 2. BORDAS NÍTIDAS E DELICADAS */
+html.light .border-slate-900,
+html.light .border-slate-800,
+html.light .border-slate-800\/40,
+html.light .border-slate-800\/50,
+html.light .border-slate-800\/60,
+html.light .border-slate-800\/80,
+html.light .border-slate-700,
+html.light .border-slate-700\/40,
+html.light .border-slate-700\/50,
+html.light .border-slate-700\/60,
+html.light .border-slate-700\/80,
+[data-theme="light"] .border-slate-900,
+[data-theme="light"] .border-slate-800,
+[data-theme="light"] .border-slate-800\/40,
+[data-theme="light"] .border-slate-800\/50,
+[data-theme="light"] .border-slate-800\/60,
+[data-theme="light"] .border-slate-800\/80,
+[data-theme="light"] .border-slate-700,
+[data-theme="light"] .border-slate-700\/40,
+[data-theme="light"] .border-slate-700\/50,
+[data-theme="light"] .border-slate-700\/60,
+[data-theme="light"] .border-slate-700\/80 {
+  border-color: #e2e8f0 !important;
+}
+
+/* 3. TIPOGRAFIA & ALTO CONTRASTE (Adequado para fundos claros) */
+/* Textos principais e títulos */
+html.light .text-white,
+[data-theme="light"] .text-white {
+  color: #090d16 !important;
+}
+
+html.light .text-slate-100,
+html.light .text-slate-200,
+[data-theme="light"] .text-slate-100,
+[data-theme="light"] .text-slate-200 {
+  color: #0f172a !important;
+}
+
+/* Subtítulos e rótulos de métricas */
+html.light .text-slate-300,
+[data-theme="light"] .text-slate-300 {
+  color: #334155 !important;
+}
+
+/* Textos secundários, metadados e contadores */
+html.light .text-slate-400,
+[data-theme="light"] .text-slate-400 {
+  color: #475569 !important;
+}
+
+/* Textos terciários, notas e hints */
+html.light .text-slate-500,
+[data-theme="light"] .text-slate-500 {
+  color: #64748b !important;
+}
+
+html.light .text-slate-600,
+[data-theme="light"] .text-slate-600 {
+  color: #64748b !important;
+}
+
+/* 4. CORES TEMÁTICAS RECALIBRADAS PARA CONTRASTE EM FUNDO CLARO */
+/* O tom esmeralda no escuro usa 400 (muito claro), no tema claro deve ser 600 ou 700 para leitura perfeita */
+html.light .text-emerald-400,
+html.light .text-emerald-300,
+[data-theme="light"] .text-emerald-400,
+[data-theme="light"] .text-emerald-300 {
+  color: #047857 !important; /* emerald-700 */
+}
+
+/* Badges e tags esmeralda */
+html.light .bg-emerald-950\/40,
+html.light .bg-emerald-950\/50,
+html.light .bg-emerald-950\/60,
+html.light .bg-emerald-500\/10,
+html.light .bg-emerald-500\/15,
+html.light .bg-emerald-500\/20,
+[data-theme="light"] .bg-emerald-950\/40,
+[data-theme="light"] .bg-emerald-950\/50,
+[data-theme="light"] .bg-emerald-950\/60,
+[data-theme="light"] .bg-emerald-500\/10,
+[data-theme="light"] .bg-emerald-500\/15,
+[data-theme="light"] .bg-emerald-500\/20 {
+  background-color: #ecfdf5 !important;
+}
+
+html.light .border-emerald-800\/40,
+html.light .border-emerald-800\/50,
+html.light .border-emerald-800\/60,
+html.light .border-emerald-800\/80,
+html.light .border-emerald-500\/20,
+html.light .border-emerald-500\/30,
+html.light .border-emerald-500\/40,
+[data-theme="light"] .border-emerald-800\/40,
+[data-theme="light"] .border-emerald-800\/50,
+[data-theme="light"] .border-emerald-800\/60,
+[data-theme="light"] .border-emerald-800\/80,
+[data-theme="light"] .border-emerald-500\/20,
+[data-theme="light"] .border-emerald-500\/30,
+[data-theme="light"] .border-emerald-500\/40 {
+  border-color: #a7f3d0 !important;
+}
+
+/* Tons de Alerta Âmbar / Laranja */
+html.light .text-amber-300,
+html.light .text-amber-400,
+[data-theme="light"] .text-amber-300,
+[data-theme="light"] .text-amber-400 {
+  color: #b45309 !important; /* amber-700 */
+}
+
+html.light .bg-amber-950\/15,
+html.light .bg-amber-950\/20,
+html.light .bg-amber-950\/40,
+html.light .bg-amber-950\/60,
+html.light .bg-amber-500\/10,
+html.light .bg-amber-500\/20,
+[data-theme="light"] .bg-amber-950\/15,
+[data-theme="light"] .bg-amber-950\/20,
+[data-theme="light"] .bg-amber-950\/40,
+[data-theme="light"] .bg-amber-950\/60,
+[data-theme="light"] .bg-amber-500\/10,
+[data-theme="light"] .bg-amber-500\/20 {
+  background-color: #fffbeb !important;
+}
+
+html.light .border-amber-800\/60,
+html.light .border-amber-600\/80,
+html.light .border-amber-900\/60,
+html.light .border-amber-500,
+[data-theme="light"] .border-amber-800\/60,
+[data-theme="light"] .border-amber-600\/80,
+[data-theme="light"] .border-amber-900\/60,
+[data-theme="light"] .border-amber-500 {
+  border-color: #fde68a !important;
+}
+
+/* Tons de Perigo / Atraso Rose */
+html.light .text-rose-400,
+html.light .text-rose-300,
+[data-theme="light"] .text-rose-400,
+[data-theme="light"] .text-rose-300 {
+  color: #be123c !important; /* rose-700 */
+}
+
+html.light .text-rose-200,
+[data-theme="light"] .text-rose-200 {
+  color: #9f1239 !important; /* rose-800 */
+}
+
+html.light .bg-rose-950\/20,
+html.light .bg-rose-950\/40,
+html.light .bg-rose-950\/50,
+html.light .bg-rose-500\/10,
+html.light .bg-rose-500\/20,
+[data-theme="light"] .bg-rose-950\/20,
+[data-theme="light"] .bg-rose-950\/40,
+[data-theme="light"] .bg-rose-950\/50,
+[data-theme="light"] .bg-rose-500\/10,
+[data-theme="light"] .bg-rose-500\/20 {
+  background-color: #fff1f2 !important;
+}
+
+html.light .border-rose-900\/70,
+html.light .border-rose-800\/50,
+html.light .border-rose-800\/60,
+html.light .border-rose-800\/80,
+html.light .border-rose-500\/40,
+[data-theme="light"] .border-rose-900\/70,
+[data-theme="light"] .border-rose-800\/50,
+[data-theme="light"] .border-rose-800\/60,
+[data-theme="light"] .border-rose-800\/80,
+[data-theme="light"] .border-rose-500\/40 {
+  border-color: #fecdd3 !important;
+}
+
+/* Tons de Azul / Sky / Cyan */
+html.light .text-sky-400,
+html.light .text-sky-300,
+html.light .text-cyan-400,
+[data-theme="light"] .text-sky-400,
+[data-theme="light"] .text-sky-300,
+[data-theme="light"] .text-cyan-400 {
+  color: #0369a1 !important; /* sky-700 */
+}
+
+html.light .bg-sky-950\/40,
+html.light .bg-cyan-500\/10,
+[data-theme="light"] .bg-sky-950\/40,
+[data-theme="light"] .bg-cyan-500\/10 {
+  background-color: #f0f9ff !important;
+}
+
+html.light .border-sky-800\/50,
+html.light .border-sky-800\/60,
+[data-theme="light"] .border-sky-800\/50,
+[data-theme="light"] .border-sky-800\/60 {
+  border-color: #bae6fd !important;
+}
+
+/* Tons de Teal */
+html.light .text-teal-400,
+html.light .text-teal-300,
+[data-theme="light"] .text-teal-400,
+[data-theme="light"] .text-teal-300 {
+  color: #0f766e !important;
+}
+
+/* 5. GRADIENTES HARMONIOSOS NO MODO CLARO */
+html.light .from-emerald-950\/40,
+[data-theme="light"] .from-emerald-950\/40 {
+  --tw-gradient-from: #ecfdf5 !important;
+}
+
+html.light .via-teal-950\/20,
+[data-theme="light"] .via-teal-950\/20 {
+  --tw-gradient-stops: var(--tw-gradient-from), #f0fdf4, var(--tw-gradient-to) !important;
+}
+
+html.light .to-slate-900,
+html.light .to-slate-900\/80,
+[data-theme="light"] .to-slate-900,
+[data-theme="light"] .to-slate-900\/80 {
+  --tw-gradient-to: #ffffff !important;
+}
+
+html.light .from-rose-950\/40,
+[data-theme="light"] .from-rose-950\/40 {
+  --tw-gradient-from: #fff1f2 !important;
+}
+
+html.light .via-amber-950\/20,
+[data-theme="light"] .via-amber-950\/20 {
+  --tw-gradient-stops: var(--tw-gradient-from), #fffbeb, var(--tw-gradient-to) !important;
+}
+
+html.light .from-slate-900,
+[data-theme="light"] .from-slate-900 {
+  --tw-gradient-from: #ffffff !important;
+}
+
+/* 6. INPUTS, SELECTS E TEXTAREAS (Campos de formulário legíveis) */
+html.light input:not([type="checkbox"]):not([type="radio"]),
+html.light select,
+html.light textarea,
+[data-theme="light"] input:not([type="checkbox"]):not([type="radio"]),
+[data-theme="light"] select,
+[data-theme="light"] textarea {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+  box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.04);
+}
+
+html.light input:focus,
+html.light select:focus,
+html.light textarea:focus,
+[data-theme="light"] input:focus,
+[data-theme="light"] select:focus,
+[data-theme="light"] textarea:focus {
+  border-color: #10b981 !important;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15) !important;
+}
+
+html.light input::placeholder,
+html.light textarea::placeholder,
+[data-theme="light"] input::placeholder,
+[data-theme="light"] textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* 7. MODAIS & BACKDROP BLUR */
+html.light .bg-black\/70,
+html.light .bg-black\/75,
+html.light .bg-black\/80,
+[data-theme="light"] .bg-black\/70,
+[data-theme="light"] .bg-black\/75,
+[data-theme="light"] .bg-black\/80 {
+  background-color: rgba(15, 23, 42, 0.45) !important;
+  backdrop-filter: blur(6px);
+}
+
+/* 8. CABEÇALHO & BARRA DE NAVEGAÇÃO */
+html.light header,
+html.light nav,
+[data-theme="light"] header,
+[data-theme="light"] nav {
+  background-color: rgba(255, 255, 255, 0.94) !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 2px 8px -2px rgba(15, 23, 42, 0.05);
+}
+
+/* 9. SOMBRAS E PROFUNDIDADE ELEGANTE */
+html.light .shadow-xl,
+html.light .shadow-2xl,
+html.light .shadow-lg,
+[data-theme="light"] .shadow-xl,
+[data-theme="light"] .shadow-2xl,
+[data-theme="light"] .shadow-lg {
+  box-shadow: 0 10px 25px -3px rgba(15, 23, 42, 0.07), 0 4px 10px -4px rgba(15, 23, 42, 0.04) !important;
+}
+
+/* 10. BLOCOS DE CÓDIGO E PRE NO MODO CLARO */
+html.light pre,
+[data-theme="light"] pre {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}

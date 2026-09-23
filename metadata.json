@@ -1,0 +1,7 @@
+{
+  "name": "FinanZen - Gestão Financeira & Assistente IA",
+  "description": "Aplicativo pessoal intuitivo de finanças, controle de despesas recorrentes, alertas de vencimento, amortização de financiamentos e assistente IA de corte de gastos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

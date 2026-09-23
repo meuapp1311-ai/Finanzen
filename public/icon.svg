@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1329" />
+      <stop offset="50%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#04070e" />
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="50%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6ee7b7" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+  <rect width="504" height="504" x="4" y="4" rx="108" fill="none" stroke="#1e293b" stroke-width="4" />
+
+  <!-- Ambient Glow -->
+  <circle cx="256" cy="256" r="140" fill="#10b981" opacity="0.15" filter="url(#glow)" />
+
+  <!-- Wallet Body Shape -->
+  <rect x="116" y="156" width="280" height="200" rx="32" fill="url(#emeraldGrad)" />
+
+  <!-- Wallet Upper Flap -->
+  <path d="M116 196 C116 174 134 156 156 156 L356 156 C378 156 396 174 396 196 L396 226 L116 226 Z" fill="#059669" opacity="0.4" />
+
+  <!-- Zen Coin / Badge -->
+  <rect x="260" y="226" width="146" height="70" rx="20" fill="#090d16" stroke="#34d399" stroke-width="5" />
+  <circle cx="333" cy="261" r="16" fill="url(#accentGrad)" />
+
+  <!-- Growth Spark / Zen Curves -->
+  <path d="M166 280 L200 246 L230 270 L270 220" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+  <polygon points="270,210 276,230 258,224" fill="#ffffff" />
+</svg>
